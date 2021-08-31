@@ -44,6 +44,9 @@ html{
 .mt-16{
   margin-top: 16px!important;
 }
+.mr-16{
+  margin-right: 16px!important;
+}
 .btn{
   color: #fff;
   background-color: #000;
@@ -120,15 +123,18 @@ html{
 #header .search-icon {
   color: #fff;
 }
-.mobile-menu-btn,
+#header .mobile-menu-btn,
 #header .search-btn{
   float: right;
   line-height: 46px;
   padding: 0 21px;
   color: white;
 }
-.mobile-menu-btn{
+#header .mobile-menu-btn{
   display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .mobile-menu-btn:hover{
   background-color: #ccc;
@@ -164,7 +170,7 @@ html{
   width: 800px;
   max-width: 100%;
   margin: auto;
-  padding: 64px 0 112px;
+  padding: 64px 0 90px;
   /* Bù lại margin âm ở Tablet */
   padding-left: 16px;
   padding-right: 16px;
@@ -233,6 +239,7 @@ html{
   margin-top: -3px;
 }
 .place-list{
+  display: flex;
   margin-top: 32px;
 }
 .place-img{
@@ -353,6 +360,8 @@ html{
   opacity: 0.9;
 }
 .contact-content{
+  display: flex;
+  justify-content: space-between;
   margin-top: 48px;
   
 }
