@@ -381,6 +381,9 @@ html{
   border: 1px solid #ccc;
   width: 100%;
 }
+.contact-form .submit{
+  -webkit-appearance: button;
+}
 .map-section img{
   width: 100%;
 }
