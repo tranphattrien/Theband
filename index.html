@@ -7,7 +7,8 @@
     <title>The band</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet"  type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet"  type="text/css" href="./assets/css/responsive.css"> 
 </head>
 <body>
     <div id="main">
@@ -34,13 +35,18 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+            <div class="mobile-menu-btn" id="mobile-menu">
+                <i class="ti-menu"></i>
+            </div>
         </div>
+        <!-- Slider -->
         <div id="slider">
             <div class="text-content">
                 <h2 class="text-heading">New York</h2>
                 <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
             </div>
         </div>
+        <!-- Content -->
         <div id="content">
             <!-- About -->
             <div id="band" class="content-section">
@@ -153,6 +159,7 @@
             <p class="copyright">Powered by <a href="#"> w3.css</a></p>
         </div>   
     </div>
+        <!-- Modal -->
         <div class="modal js-modal">
             <div class="modal-container js-modal-container">
                 <div class="modal-close js-modal-close">
@@ -185,6 +192,7 @@
             </div>
         </div>
     </div>
+    <!-- JS modal -->
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
@@ -204,6 +212,31 @@
         modalContainer.addEventListener('click', function(event){
             event.stopPropagation()
         })
+    </script>
+    <!-- Menu mobile -->
+    <script>
+        // Open and close menu
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        mobileMenu.onclick = function(){
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null
+            }
+        }
+        // Tu dong close khi chon menu
+        var menuItems = document.querySelectorAll('#nav li a[href *="#"]');
+        for(var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(){
+                header.style.height = null
+            }
+        }
+        
+
     </script>
 </body>
 </html>

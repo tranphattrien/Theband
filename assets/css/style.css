@@ -68,6 +68,7 @@ html{
   height: 46px;
   background-color: black;
   z-index: 1;
+  /* overflow: hidden; */
 }  
 #nav{
   display: inline-block;
@@ -119,10 +120,20 @@ html{
 #header .search-icon {
   color: #fff;
 }
+.mobile-menu-btn,
 #header .search-btn{
   float: right;
   line-height: 46px;
   padding: 0 21px;
+  color: white;
+}
+.mobile-menu-btn{
+  display: none;
+}
+.mobile-menu-btn:hover{
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
 }
 #header .search-btn:hover{
   background-color: red;
@@ -151,8 +162,12 @@ html{
 }
 #content .content-section{
   width: 800px;
+  max-width: 100%;
   margin: auto;
   padding: 64px 0 112px;
+  /* Bù lại margin âm ở Tablet */
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #content .section-heading{
   font-size: 30px;
