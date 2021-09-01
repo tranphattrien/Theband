@@ -1,12 +1,12 @@
 /* PC */
-@media (min-width: 1024px){
+@media (min-width: 64em){
 
 }
 /* Tablet */
-@media (min-width: 740px) and (max-width: 1023){
+@media (min-width: 45.25em) and (max-width: 63.9375em){
 }
 /* Mobile */
-@media (max-width: 740px){
+@media (max-width: 46.1875em){
     .s-full,
     .s-col-full{
         width: 100%;
@@ -62,5 +62,11 @@
     }
     .contact-content{
         flex-direction: column;
+    }
+    .contact-info p{
+        padding: 8px 0;
+    }
+    .btn{
+        width: 100%;
     }
 }
